@@ -1,26 +1,32 @@
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Layout from "../../components/Layout";
+import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/api/products')
-      .then(response => response.json())
-      .then(data => setProducts(data));
+    fetch("/api/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data));
   }, []);
 
   return (
     <Layout>
       <h1>Product Listing</h1>
       <div className="product-list">
-        {products.map(product => (
+        {products.map((product) => (
           <div key={product.id} className="product-card">
             <Link href={`/products/${product.id}`} legacyBehavior>
               <a>
-                <Image src={product.image} alt={product.name} width={200} height={200} className="product-image" />
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={200}
+                  height={200}
+                  className="product-thumbnail"
+                />
                 <h2>{product.name}</h2>
               </a>
             </Link>
@@ -40,9 +46,11 @@ const Products = () => {
           width: 200px;
           text-align: center;
         }
-        .product-image {
-          width: 100%;
-          height: auto;
+        .product-thumbnail {
+          object-fit: cover;
+          object-position: center;
+          width: 200px;
+          height: 200px;
         }
       `}</style>
     </Layout>

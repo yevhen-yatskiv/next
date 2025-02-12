@@ -30,7 +30,7 @@ const Product = () => {
   return (
     <Layout>
       <h1>{product.name}</h1>
-      <Image src={product.image} alt={product.name} width={300} height={300} className="product-image" />
+      <Image src={product.image} alt={product.name} width={480} height={480} className="product-image" />
       <p>{product.description}</p>
       <style jsx>{`
         .product-image {

@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "store.storeimages.cdn-apple.com",
+        hostname: "images.unsplash.com",
         port: "",
         pathname: "**",
         search: "",
