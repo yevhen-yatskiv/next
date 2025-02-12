@@ -15,12 +15,12 @@ To get started with any of the projects, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nextjs.git
+   git clone https://github.com/yevhen-yatskiv/nextjs.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd /Users/yevhen.yatskiv/Personal/Workspace/nextjs/simple-app
+   cd ../nextjs/{project-name}
    ```
 
 3. Install dependencies:
