@@ -20,7 +20,7 @@ const Products = () => {
       try {
         const response = await fetch("/api/products");
         if (!response.ok) throw new Error("Failed to fetch products");
-      
+
         const data = await response.json();
         setProducts(data);
       } catch (err: unknown) {
@@ -38,7 +38,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <h1>Products</h1>
+      <h1 className="center">Products</h1>
       <div className="product-list">
         {products.length > 0 ? (
           products.map((product) => (
@@ -47,14 +47,16 @@ const Products = () => {
                 href={`/products/${product.id}`}
                 aria-label={`View details for ${product.name}`}
               >
-                <Image
-                  src={product.image}
-                  alt={product.name || "Product image"}
-                  width={200}
-                  height={200}
-                  className="product-thumbnail"
-                />
-                <h2>{product.name}</h2>
+                <a>
+                  <Image
+                    src={product.image}
+                    alt={product.name || "Product image"}
+                    width={200}
+                    height={200}
+                    className="product-thumbnail"
+                  />
+                  <h2>{product.name}</h2>
+                </a>
               </Link>
               <p>{product.description}</p>
             </div>
@@ -70,6 +72,11 @@ const Products = () => {
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 20px;
           padding: 20px;
+        }
+        @media (min-width: 1200px) {
+          .product-list {
+            grid-template-columns: repeat(5, 1fr);
+          }
         }
         .product-card {
           border: 1px solid #ccc;
@@ -87,6 +94,9 @@ const Products = () => {
           width: 100%;
           height: auto;
           border-radius: 8px;
+        }
+        .center {
+          text-align: center;
         }
       `}</style>
     </Layout>

@@ -1,52 +1,78 @@
-import { useRouter } from 'next/router';
-import Layout from '../../components/Layout';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import Layout from "../../components/Layout";
+import Image from "next/image";
 
 interface Product {
   id: number;
   name: string;
-  image: string;
   description: string;
+  image: string;
 }
 
-const Product = () => {
+interface ProductPageProps {
+  product: Product;
+}
+
+const ProductPage = ({ product }: ProductPageProps) => {
   const router = useRouter();
-  const { id } = router.query;
-  const [product, setProduct] = useState<Product | null>(null);
 
-  useEffect(() => {
-    if (id) {
-      fetch(`/api/products`)
-        .then(response => response.json())
-        .then(data => {
-          const product = data.find((p: Product) => p.id === parseInt(id as string));
-          setProduct(product);
-        });
-    }
-  }, [id]);
-
-  if (!product) {
-    return (
-      <Layout>
-        <h1>Product not found</h1>
-      </Layout>
-    );
+  if (router.isFallback) {
+    return <p>Loading product...</p>;
   }
 
   return (
     <Layout>
-      <h1>{product.name}</h1>
-      <Image src={product.image} alt={product.name} width={480} height={480} className="product-image" />
-      <p>{product.description}</p>
+      <div className="product-detail">
+        <Image
+          src={product.image}
+          alt={product.name}
+          width={300}
+          height={300}
+          className="product-image"
+        />
+        <h1>{product.name}</h1>
+        <p>{product.description}</p>
+      </div>
+
       <style jsx>{`
+        .product-detail {
+          text-align: center;
+          padding: 20px;
+        }
         .product-image {
-          width: 100%;
-          height: auto;
+          object-fit: cover;
+          border-radius: 8px;
         }
       `}</style>
     </Layout>
   );
 };
 
-export default Product;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await fetch("http://localhost:3000/api/products");
+  const products: Product[] = await response.json();
+
+  const paths = products.map((product) => ({
+    params: { id: product.id.toString() },
+  }));
+
+  return { paths, fallback: true };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const response = await fetch("http://localhost:3000/api/products");
+  const products: Product[] = await response.json();
+  const product = products.find((p) => p.id === Number(params?.id));
+
+  if (!product) {
+    return { notFound: true };
+  }
+
+  return {
+    props: { product },
+    revalidate: 10, // Revalidate at most every 10 seconds
+  };
+};
+
+export default ProductPage;
