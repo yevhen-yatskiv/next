@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/Header.module.css";
+import styles from "./Header.module.css";
 import Image from "next/image";
 import logo from "../public/logo.svg";
 
