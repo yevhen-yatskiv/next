@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "@/components/Layout";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -46,6 +46,7 @@ const Products = () => {
               <Link
                 href={`/products/${product.id}`}
                 aria-label={`View details for ${product.name}`}
+                legacyBehavior
               >
                 <a>
                   <Image
