@@ -1,10 +1,15 @@
-import Link from 'next/link';
-import styles from '../styles/Header.module.css';
+import Link from "next/link";
+import styles from "../styles/Header.module.css";
+import Image from "next/image";
+import logo from "../public/logo.svg";
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>Marketplace</div>
+      <div className={styles.logoContainer}>
+        <Image src={logo} alt="Marketplace" className={styles.logoImage} />
+        <div className={styles.logoText}>Marketplace</div>
+      </div>
       <nav className={styles.nav}>
         <Link href="/" legacyBehavior>
           <a className={styles.navLink}>Home</a>
