@@ -1,14 +1,24 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import logo from "../public/logo.svg";
 
 const Header: React.FC = () => {
+  const router = useRouter();
+  const isHomePage = router.pathname === "/";
+
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <Image src={logo} alt="Marketplace" className={styles.logoImage} />
-        <div className={styles.logoText}>Marketplace</div>
+        {isHomePage ? (
+          <span className={styles.logoText}>Marketplace</span>
+        ) : (
+          <Link href="/" className={styles.logoText}>
+            <span>Marketplace</span>
+          </Link>
+        )}
       </div>
       <nav className={styles.nav}>
         <Link href="/" legacyBehavior>

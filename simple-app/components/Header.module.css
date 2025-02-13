@@ -62,13 +62,14 @@
   color: #fff;
   transition: color 0.3s ease, text-shadow 0.3s ease;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
 }
 
 .logoText:hover {
   color: #ffdd57;
   text-shadow: 1px 1px 8px rgba(255, 221, 87, 0.6);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 
 .nav {
   display: flex;
