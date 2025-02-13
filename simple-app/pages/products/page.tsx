@@ -4,20 +4,27 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  interface Product {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+  }
+
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await fetch("/api/products");
         if (!response.ok) throw new Error("Failed to fetch products");
-
+      
         const data = await response.json();
         setProducts(data);
-      } catch (err) {
-        setError(err.message);
+      } catch (err: unknown) {
+        setError((err as Error).message);
       } finally {
         setLoading(false);
       }

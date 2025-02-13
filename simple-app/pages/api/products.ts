@@ -1,4 +1,13 @@
-const products = [
+import { NextApiRequest, NextApiResponse } from 'next';
+
+type Product = {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+};
+
+const products: Product[] = [
   {
     id: 1,
     name: 'AirPods Pro 2', 
@@ -19,6 +28,6 @@ const products = [
   },
 ];
 
-export default function handler(req, res) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(products);
 }

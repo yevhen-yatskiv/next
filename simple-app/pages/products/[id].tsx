@@ -3,17 +3,24 @@ import Layout from '../../components/Layout';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+}
+
 const Product = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     if (id) {
       fetch(`/api/products`)
         .then(response => response.json())
         .then(data => {
-          const product = data.find(p => p.id === parseInt(id));
+          const product = data.find((p: Product) => p.id === parseInt(id as string));
           setProduct(product);
         });
     }

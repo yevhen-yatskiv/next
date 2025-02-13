@@ -3,7 +3,7 @@ import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import logo from "../public/logo.svg";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
