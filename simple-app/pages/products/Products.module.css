@@ -1,14 +1,7 @@
 .productList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
-  padding: 20px;
-}
-
-@media (min-width: 1200px) {
-  .productList {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 
 .productCard {
