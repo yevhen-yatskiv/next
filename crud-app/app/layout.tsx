@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="max-w-3xl mx-auto text-slate-800">
-          <header className="p-6 border-b flex justify-between bg-red-400 rounded-bl-lg rounded-br-lg">
+          <header className="p-6 border-b flex items-center justify-between bg-red-400 rounded-bl-lg rounded-br-lg">
             <Link className="text-2xl font-bold text-white" href="/">
               Topics
             </Link>
