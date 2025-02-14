@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "@/components/Layout";
 import styles from "./Contact.module.css";
 
 const Contact = () => {

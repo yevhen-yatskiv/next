@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import styles from "./Products.module.css"; // Ensure correct import path
+import styles from "./Products.module.css";
 
 const Products = () => {
   interface Product {

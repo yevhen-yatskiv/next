@@ -8,10 +8,22 @@ const Header: React.FC = () => {
   const router = useRouter();
   const isHomePage = router.pathname === "/";
 
+  const handleLogoClick = () => {
+    if (!isHomePage) {
+      router.push("/");
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <Image src={logo} alt="Marketplace" className={styles.logoImage} />
+        <Image
+          src={logo}
+          alt="Marketplace"
+          className={styles.logoImage}
+          onClick={handleLogoClick}
+          style={{ cursor: isHomePage ? "default" : "pointer" }}
+        />
         {isHomePage ? (
           <span className={styles.logoText}>Marketplace</span>
         ) : (
