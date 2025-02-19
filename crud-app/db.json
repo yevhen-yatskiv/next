@@ -3,17 +3,52 @@
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
       "title": "Introduction to REST APIs",
-      "content": "A REST API is an application programming interface that follows REST principles..."
+      "content": "A REST API is an application programming interface that follows REST principles. It allows communication between a client and a server using HTTP methods. REST APIs are stateless and often use JSON for data exchange."
     },
     {
       "id": "c1a9f439-3b24-4f63-b9e2-799dbd72e633",
       "title": "Understanding JSON",
-      "content": "JSON (JavaScript Object Notation) is a lightweight data-interchange format..."
+      "content": "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy to read and write for both humans and machines. JSON is widely used in APIs and web applications for data transmission."
     },
     {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "title": "New Topic",
-      "content": "This is a large string for content..."
+      "title": "HTTP Methods Explained",
+      "content": "HTTP methods define actions for RESTful web services. Common methods include GET, POST, PUT, and DELETE. Each method has a specific purpose in managing resources."
+    },
+    {
+      "id": "17e8653b-1d56-4c2d-bef1-4c8e3b3c8ad1",
+      "title": "What is an API?",
+      "content": "An API (Application Programming Interface) allows software applications to communicate. It provides a set of rules and protocols for interaction. APIs can be public, private, or partner-based, depending on usage."
+    },
+    {
+      "id": "25f3b8a7-3cf6-4c74-915d-fc2de5a5c3a1",
+      "title": "REST vs SOAP",
+      "content": "REST and SOAP are two different web service architectures. REST is lightweight and uses JSON, while SOAP is XML-based and follows strict protocols. REST is preferred for web applications due to its simplicity."
+    },
+    {
+      "id": "9a1f6a33-4b6a-4e3c-b6de-23989e3ef4ad",
+      "title": "API Authentication Methods",
+      "content": "APIs often require authentication to secure access. Common methods include API keys, OAuth, and JWT (JSON Web Tokens). Choosing the right method depends on security and usability needs."
+    },
+    {
+      "id": "59c9e4e7-fb0e-4f13-b3b6-6c2a1b6b9f6e",
+      "title": "Versioning in APIs",
+      "content": "API versioning allows changes without breaking existing clients. Methods include URL versioning, header versioning, and query parameters. Proper versioning ensures compatibility and flexibility."
+    },
+    {
+      "id": "a4fbeefc-6e1f-4b47-a1a2-89e4ebea6df2",
+      "title": "Rate Limiting in APIs",
+      "content": "Rate limiting prevents excessive API requests from overloading a server. It is often implemented using request quotas and time-based limits. Proper rate limiting enhances security and performance."
+    },
+    {
+      "id": "ef3f8c3a-1b0d-45d3-bb84-5c3f5a6b6d9c",
+      "title": "Error Handling in APIs",
+      "content": "Good API error handling improves user experience. Standard HTTP status codes like 400, 401, and 500 help indicate issues. Detailed error messages help developers troubleshoot efficiently."
+    },
+    {
+      "id": "7bd5b1e5-8c49-4032-a6e3-9d1dbe3b8f10",
+      "title": "GraphQL vs REST",
+      "content": "GraphQL and REST are two different API architectures. GraphQL allows clients to request only the needed data, reducing over-fetching. REST is simpler but may return more data than required."
     }
   ]
 }
