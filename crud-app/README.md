@@ -1,6 +1,33 @@
+# CRUD App
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- You have installed Node.js and npm.
+- You have a basic understanding of JavaScript and React.
+
 ## Getting Started
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/crud-app.git
+    cd crud-app
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+### Running the Development Server
 
 First, run the development server:
 
@@ -80,18 +107,3 @@ curl -X PUT "http://localhost:4000/topics/550e8400-e29b-41d4-a716-446655440000" 
 ```bash
 curl -X DELETE "http://localhost:4000/topics/550e8400-e29b-41d4-a716-446655440000"
 ```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
