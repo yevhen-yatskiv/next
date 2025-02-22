@@ -1,13 +1,12 @@
-# nextjs
+# Next
 
-This repository contains different NextJS projects. Below is the common information about the submodules:
+This repository contains different Next projects. Below is the common information about the submodules:
 
-## Submodules
+## Projects
 
-1. **simple-app**
-   - Description: Marketplace application built with NextJS.
-   - Location: `nextjs/simple-app`
-   - Setup: Follow the steps below to set up the project.
+1. **crud-app**
+2. **crypto-tracker**
+3. **simple-app**
 
 ## Common Setup
 
@@ -15,12 +14,12 @@ To get started with any of the projects, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yevhen-yatskiv/nextjs.git
+   git clone https://github.com/yevhen-yatskiv/next.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd ../nextjs/{project-name}
+   cd ../next/{project-name}
    ```
 
 3. Install dependencies:
