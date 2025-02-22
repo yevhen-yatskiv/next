@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import hero0 from "@/app/assets/hero-0.png";
-import hero1 from "@/app/assets/hero-1.png";
-import hero2 from "@/app/assets/hero-2.png";
-import hero3 from "@/app/assets/hero-3.png";
-import hero4 from "@/app/assets/hero-4.png";
-import hero5 from "@/app/assets/hero-5.png";
 import Marquee from "react-fast-marquee";
+import carousel0 from "@/app/assets/carousel-0.png";
+import carousel1 from "@/app/assets/carousel-1.png";
+import carousel2 from "@/app/assets/carousel-2.png";
+import carousel3 from "@/app/assets/carousel-3.png";
+import carousel4 from "@/app/assets/carousel-4.png";
+import carousel5 from "@/app/assets/carousel-5.png";
 
 const Carousel = () => {
   return (
@@ -90,49 +90,49 @@ const Carousel = () => {
               gradient={false}
             >
               <Image
-                src={hero0}
+                src={carousel0}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
                 alt="Carousel image"
               />
               <Image
-                src={hero1}
+                src={carousel1}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
                 alt="Carousel image"
               />
               <Image
-                src={hero2}
+                src={carousel2}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
                 alt="Carousel image"
               />
               <Image
-                src={hero0}
+                src={carousel0}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
                 alt="Carousel image"
               />
               <Image
-                src={hero3}
+                src={carousel3}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
                 alt="Carousel image"
               />
               <Image
-                src={hero4}
+                src={carousel4}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
                 alt="Carousel image"
               />
               <Image
-                src={hero5}
+                src={carousel5}
                 quality={100}
                 priority
                 className="heroCaroImage w-48"
