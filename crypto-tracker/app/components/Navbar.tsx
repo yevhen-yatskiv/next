@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import logo from '@/app/assets/logo.png'
 
 const Navbar = () => {
   return (
@@ -8,7 +10,7 @@ const Navbar = () => {
         <div className="container flex justify-between h-16 mx-auto">
           <div className="flex justify-between w-full">
             <Link  href="/" aria-label="Back to homepage" className="flex items-center p-2">
-              <p className=' font-semibold text-3xl'>LOGO</p>
+              <Image src={logo} alt="Logo" width={64} height={64} />
             </Link>
             <ul className="items-stretch hidden space-x-3 lg:flex">
               <li className="flex justify-between w-full">
