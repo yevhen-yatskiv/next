@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import carousel0 from "@/app/assets/carousel/img-0.png";
-import carousel1 from "@/app/assets/carousel/img-1.png";
-import carousel2 from "@/app/assets/carousel/img-2.png";
-import carousel3 from "@/app/assets/carousel/img-3.png";
-import carousel4 from "@/app/assets/carousel/img-4.png";
-import carousel5 from "@/app/assets/carousel/img-5.png";
+import carousel0 from "@/public/carousel/img-0.png";
+import carousel1 from "@/public/carousel/img-1.png";
+import carousel2 from "@/public/carousel/img-2.png";
+import carousel3 from "@/public/carousel/img-3.png";
+import carousel4 from "@/public/carousel/img-4.png";
+import carousel5 from "@/public/carousel/img-5.png";
 
 const Carousel = () => {
   return (
